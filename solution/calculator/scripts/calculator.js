@@ -6,12 +6,26 @@ var currentOperator = undefined;
 var operator1 = undefined;
 var operator2 = undefined;
 
-function updateCurrentInputValue(digit) {
-    if(currentInputValue === undefined)
-        currentInputValue = 0;
-    currentInputValue = (currentInputValue * 10) + parseInt(digit);
-    console.log('Current input value: ' + currentInputValue);
-    writeInput(currentInputValue);
+function calculate() {
+    console.log("calculate: " + operator1 + " " + currentOperator + " " + operator2);
+    if(operator1 === undefined || operator2 === undefined)
+        return undefined;
+    switch(currentOperator) {
+        case '+':
+            return operator1 + operator2;
+            break;
+        case '-':
+            return operator1 - operator2;
+            break;
+        case '/':
+            return operator1 / operator2;
+            break;
+        case '*':
+            return operator1 * operator2;
+            break;
+        default:
+            return undefined;
+    }
 }
 
 function setOperator(operator) {
@@ -37,26 +51,12 @@ function equals() {
     }
 }
 
-function calculate() {
-    console.log("calculate: " + operator1 + " " + currentOperator + " " + operator2);
-    if(operator1 === undefined || operator2 === undefined)
-        return undefined;
-    switch(currentOperator) {
-        case '+':
-            return operator1 + operator2;
-            break;
-        case '-':
-            return operator1 - operator2;
-            break;
-        case '/':
-            return operator1 / operator2;
-            break;
-        case '*':
-            return operator1 * operator2;
-            break;
-        default:
-            return undefined;
-    }
+function updateCurrentInputValue(digit) {
+    if(currentInputValue === undefined)
+        currentInputValue = 0;
+    currentInputValue = (currentInputValue * 10) + parseInt(digit);
+    console.log('Current input value: ' + currentInputValue);
+    writeInput(currentInputValue);
 }
 
 function resetOperators() {
@@ -75,7 +75,6 @@ function clear() {
 function error(message) {
     console.log("Error: " + message);
     writeOutput(message);
-    writeInput("");
 }
 
 /**
