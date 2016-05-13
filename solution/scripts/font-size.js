@@ -1,9 +1,9 @@
 sliderClickHandler = function() {
     var tag = document.getElementsByTagName("body");
-    tag.fontSize(changeFont);
+    //tag.fontSize(changeFont); <-- function does not exist
 }
 
-("#font-slider").onclick = sliderClickHandler;
+//("#font-slider").onclick = sliderClickHandler;
 
 function changeFont () {
     var font = 10;
