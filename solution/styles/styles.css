@@ -12,9 +12,6 @@
 body {
     font-size: 1rem;
     font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
     margin: 2rem;
     counter-reset: h3;
 }
@@ -235,12 +232,12 @@ th, td {
     padding: 0.5rem;
 }
 
-tbody > th {
+tbody > tr > th {
     text-align: left;
     font-weight: bold;;
 }
 
-tbody > td {
+tbody > tr > td {
     text-align: center;
 }
 
@@ -310,7 +307,6 @@ button {
 }
 
 #font-size-form {
-    margin-top: 2rem;
     float: right;
 }
 
