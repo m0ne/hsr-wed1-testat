@@ -61,29 +61,22 @@ body {
     color: steelblue;
 }
 
-#italian::before {
+.navigation a[hreflang="it"]::before {
     background: url("../../media/flag-it.svg") no-repeat;
+}
+
+.navigation a[hreflang="fr"]::before {
+    background: url("../../media/flag-fr.svg") no-repeat;
+}
+
+.navigation a[hreflang="en"]::before {
+    background: url("../../media/flag-en.svg") no-repeat;
+}
+
+.navigation a[hreflang]::before {
     background-size: 1.4rem 0.8rem;
     display: inline-block;
     width: 1.7em;
-    height: 0.8rem;
-    content: '';
-}
-
-#french::before {
-    background: url("../../media/flag-fr.svg") no-repeat;
-    background-size: 1.4rem 0.8rem;
-    display: inline-block;
-    width: 1.7rem;
-    height: 0.8rem;
-    content: '';
-}
-
-#english::before {
-    background: url("../../media/flag-en.svg") no-repeat;
-    background-size: 1.4rem 0.8rem;
-    display: inline-block;
-    width: 1.7rem;
     height: 0.8rem;
     content: '';
 }
