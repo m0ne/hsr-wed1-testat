@@ -16,6 +16,7 @@ body {
     flex-flow: row;
     flex-wrap: wrap;
     margin: 2rem;
+    counter-reset: h3;
 }
 
 #page-header, #page-footer {
@@ -146,36 +147,9 @@ h3 {
     margin-bottom: 1rem;
 }
 
-#calculator > header > h3::before {
-    content: '1. ';
-}
-
-#demonstration > header > h3::before {
-    content: '2. ';
-}
-
-#ti-nspire > header > h3::before {
-    content: '3. ';
-}
-
-#calculator-type > header > h3::before {
-    content: '4. ';
-}
-
-#gained-time > header > h3::before {
-    content: '5. ';
-}
-
-#iphone > header > h3::before {
-    content: '6. ';
-}
-
-#best-and-worst-calculators > header > h3::before {
-    content: '7. ';
-}
-
-#search > header > h3::before {
-    content: '8. ';
+h3:before {
+    counter-increment: h3;
+    content: counter(h3) " "
 }
 
 h4 {
