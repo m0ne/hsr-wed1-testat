@@ -1,301 +1,356 @@
 /* reset */
-*  {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* document */
 body {
-	font-size: 1rem;
-	font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
-	display: flex;
-	flex-flow: row;
-	flex-wrap: wrap;
-	margin: 2rem;
+    font-size: 1rem;
+    font-family: "URW Gothic L", "Helvetica", "Arial", sans-serif;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    margin: 2rem;
 }
+
 #page-header, #page-footer {
-	width: 100%;
-	background: darkslateblue;
-	color: white;
+    width: 100%;
+    background: darkslateblue;
+    color: white;
 }
+
 #page-header {
-	display: flex;
-	height: 4.5rem;
+    display: flex;
+    height: 4.5rem;
 }
+
 #page-header > a > img {
-	height: 120%;
-	width: auto;
+    height: 120%;
+    width: auto;
 }
+
 #page-footer {
-	font-style: normal;
-	padding: 1rem;
-	border: none;
-	margin-top: 2rem;
+    font-style: normal;
+    padding: 1rem;
+    border: none;
+    margin-top: 2rem;
 }
+
 #page-footer img {
-	height: 5%;
-	width: auto;
-	margin-left: 0.2rem;
-	margin-bottom: 0;
+    height: 5%;
+    width: auto;
+    margin-left: 0.2rem;
+    margin-bottom: 0;
 }
+
 #page-footer a {
-	color: white;
+    color: white;
 }
+
 .navigation {
-	width: 100%;
-	background: rgb(230,230,230);
-	border: solid steelblue;
-	padding: 0.5rem;
+    width: 100%;
+    background: rgb(230, 230, 230);
+    border: solid steelblue;
+    padding: 0.5rem;
 }
+
 .navigation a {
-	color: steelblue;
+    color: steelblue;
 }
+
 #italian::before {
-	background: url("../../media/flag-it.svg") no-repeat;
-	background-size: 1.4rem 0.8rem;
-	display: inline-block;
-	width: 1.7em;
-	height: 0.8rem;
-	content: '';
+    background: url("../../media/flag-it.svg") no-repeat;
+    background-size: 1.4rem 0.8rem;
+    display: inline-block;
+    width: 1.7em;
+    height: 0.8rem;
+    content: '';
 }
+
 #french::before {
-	background: url("../../media/flag-fr.svg") no-repeat;
-	background-size: 1.4rem 0.8rem;
-	display: inline-block;
-	width: 1.7rem;
-	height: 0.8rem;
-	content: '';
- }
+    background: url("../../media/flag-fr.svg") no-repeat;
+    background-size: 1.4rem 0.8rem;
+    display: inline-block;
+    width: 1.7rem;
+    height: 0.8rem;
+    content: '';
+}
+
 #english::before {
-	background: url("../../media/flag-en.svg") no-repeat;
-	background-size: 1.4rem 0.8rem;
-	display: inline-block;
-	width: 1.7rem;
-	height: 0.8rem;
-	content: '';
+    background: url("../../media/flag-en.svg") no-repeat;
+    background-size: 1.4rem 0.8rem;
+    display: inline-block;
+    width: 1.7rem;
+    height: 0.8rem;
+    content: '';
 }
 
 /* images */
 img, video, audio {
-	width: 70%;
-	height: auto;
+    width: 70%;
+    height: auto;
 }
+
 iframe {
-	width: 100%;
-	height: calc(56.25vw - 2rem);
-	border: none;
+    width: 100%;
+    height: calc(56.25vw - 2rem);
+    border: none;
 }
+
 #demonstration > figure {
-	width: calc(55vw - 2rem);
+    width: calc(55vw - 2rem);
 }
+
 #scm-marchant {
-	max-width: 30%;
-	float: left;
-	margin-right: 2rem;
-	margin-bottom: 1rem;
+    max-width: 30%;
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
 }
+
 figcaption {
-	font-size: 0.9rem;
-	color: grey;
-	display: block;
+    font-size: 0.9rem;
+    color: grey;
+    display: block;
 }
+
 button > img {
-	width: 9.8rem;
-	height: 1.8rem;
+    width: 9.8rem;
+    height: 1.8rem;
 }
 
 /* text */
 h1 {
-	font-size: 3rem;
-	font-weight: 700;
-	padding-top: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    padding-top: 1rem;
 }
+
 h2 {
-	font-size: 2.2rem;
-	margin-top: 2.5rem;
-	font-weight: 700;
+    font-size: 2.2rem;
+    margin-top: 2.5rem;
+    font-weight: 700;
 }
+
 h3 {
-	width: 100%;
-	font-size: 1.5rem;
-	font-weight: 700;
-	border-bottom: solid black thin;
-	margin-top: 1.5rem;
-	margin-bottom: 1rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-bottom: solid black thin;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
+
 #calculator > header > h3::before {
-	content: '1. ';
+    content: '1. ';
 }
+
 #demonstration > header > h3::before {
-	content: '2. ';
+    content: '2. ';
 }
+
 #ti-nspire > header > h3::before {
-	content: '3. ';
+    content: '3. ';
 }
+
 #calculator-type > header > h3::before {
-	content: '4. ';
+    content: '4. ';
 }
+
 #gained-time > header > h3::before {
-	content: '5. ';
+    content: '5. ';
 }
+
 #iphone > header > h3::before {
-	content: '6. ';
+    content: '6. ';
 }
+
 #best-and-worst-calculators > header > h3::before {
-	content: '7. ';
+    content: '7. ';
 }
+
 #search > header > h3::before {
-	 content: '8. ';
- }
+    content: '8. ';
+}
+
 h4 {
-	font-size: 1rem;
-	font-weight: bold;
-	margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
+
 p {
-	margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
+
 address {
-	margin-bottom: 1rem;
-	font-style: normal;
+    margin-bottom: 1rem;
+    font-style: normal;
 }
+
 a {
-	text-decoration: underline;
-	color: black;
+    text-decoration: underline;
+    color: black;
 }
+
 a:hover, a:active, a:focus {
-	text-decoration: none;
+    text-decoration: none;
 }
+
 small {
-	margin-top: 1rem;
-	display: block;
+    margin-top: 1rem;
+    display: block;
 }
+
 article > footer {
-	font-size: 1rem;
-	font-style: italic;
-	padding-top: 0.3rem;
-	padding-left: 0.3rem;
-	padding-bottom: 0.2rem;
-	border: thin dashed;
-	margin-top: 1rem;
+    font-size: 1rem;
+    font-style: italic;
+    padding-top: 0.3rem;
+    padding-left: 0.3rem;
+    padding-bottom: 0.2rem;
+    border: thin dashed;
+    margin-top: 1rem;
 }
 
 /* lists */
 dl > dd {
-	margin-left: 1.5rem;
+    margin-left: 1.5rem;
 }
+
 ul > li {
-	margin-left: 2rem;
-	list-style-type: square;
+    margin-left: 2rem;
+    list-style-type: square;
 }
+
 ol > li {
-	margin-left: 4rem;
-	margin-bottom: 1rem;
+    margin-left: 4rem;
+    margin-bottom: 1rem;
 }
+
 .type-list > p {
-	color: steelblue;
-	font-weight: bold;
-	margin-bottom: 0;
-	margin-top: 0.5rem;
+    color: steelblue;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
 }
+
 .type-list > div {
-	margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 /* table */
 table {
-	width: 100%;
-	background: white;
-	border-collapse: collapse;
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
 }
+
 thead {
-	background: darkslateblue;
-	color: white;
-	border-top: solid black thin;
-	border-bottom: solid black thin;
+    background: darkslateblue;
+    color: white;
+    border-top: solid black thin;
+    border-bottom: solid black thin;
 }
+
 th, td {
-	padding: 0.5rem;
+    padding: 0.5rem;
 }
+
 tbody > th {
-	text-align: left;
-	font-weight: bold;;
+    text-align: left;
+    font-weight: bold;;
 }
+
 tbody > td {
-	text-align: center;
+    text-align: center;
 }
+
 tr:nth-child(2n) {
-	background: rgb(230,230,230);
-	border-top: solid steelblue;
-	border-bottom: solid steelblue;
+    background: rgb(230, 230, 230);
+    border-top: solid steelblue;
+    border-bottom: solid steelblue;
 }
 
 /* forms */
 label {
-	color: grey;
+    color: grey;
 }
+
 input:not([type="radio"]):not([type="checkbox"]):not([type="file"]), select, textarea {
-	background: rgb(230,230,230);
-	border-color: transparent;
-	border-bottom: solid black thin;
-	margin-bottom: 1.5rem;
+    background: rgb(230, 230, 230);
+    border-color: transparent;
+    border-bottom: solid black thin;
+    margin-bottom: 1.5rem;
 }
+
 aside form, aside form input:not([type="file"]):not([type="radio"]):not([type="checkbox"]), textarea, select {
-	width: 100%;
+    width: 100%;
 }
+
 .gender > span {
-	display: block;
-	margin-bottom: 1.5rem;
+    display: block;
+    margin-bottom: 1.5rem;
 }
+
 .verification > span {
-	display: block;
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
+
 fieldset {
-	padding: 0.5rem;
-	border-color: grey;
-	border-radius: 1%;
-	margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-color: grey;
+    border-radius: 1%;
+    margin-bottom: 1rem;
 }
+
 input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):hover,
 input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):active,
 input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):focus,
 select:hover, select:active, select:focus, textarea:hover, textarea:active, textarea:focus {
-	color: steelblue;
-	border-color: steelblue;
+    color: steelblue;
+    border-color: steelblue;
 }
+
 button {
-	background: darkslateblue;
-	color: white;
-	border-radius: 0.5rem;
-	width: 10rem;
-	height: 2rem;
+    background: darkslateblue;
+    color: white;
+    border-radius: 0.5rem;
+    width: 10rem;
+    height: 2rem;
 }
+
 #search > form {
-	display: flex;
+    display: flex;
 }
+
 #search > form > input {
-	width: 20rem;
-	height: 1.8rem;
+    width: 20rem;
+    height: 1.8rem;
 }
+
 #font-size-form {
-	margin-top: 2rem;
-	float: right;
+    margin-top: 2rem;
+    float: right;
 }
+
 #font-slider {
-	border-bottom: none;
-	border-radius: 1rem;
-	width: 14rem;
-	height: 0.5rem;
+    border-bottom: none;
+    border-radius: 1rem;
+    width: 14rem;
+    height: 0.5rem;
 }
+
 #font-size-form > label, #font-size-form > input, #font-size-form > output {
-	display: inline-block;
-	vertical-align: middle;
-	padding: 0; margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
 }
 
