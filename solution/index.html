@@ -15,7 +15,7 @@
 
 <body>
 <header id="page-header">
-    <img src="../media/logo-wikipraktika.svg" alt="Logo Wikipraktika"/>
+    <a href="."><img src="../media/logo-wikipraktika.svg" alt="Logo Wikipraktika"/></a>
     <h1>Wikipraktika</h1>
 </header>
 
@@ -39,15 +39,9 @@
             <dd><a href="/de/calculator/tools/permanent-link">Permanenter Link</a></dd>
             <dd><a href="/de/calculator/tools/cite-article">Artikel zitieren</a></dd>
             <dt>In andern Sprachen</dt>
-            <dd><img src="../media/flag-it.svg" alt="Flagge Italien"/>
-                <a href="/it/articles/calculator"> Italiano</a>
-            </dd>
-            <dd><img src="../media/flag-fr.svg" alt="Flagge Frankreich"/>
-                <a href="/fr/articles/calculator"> Francais</a>
-            </dd>
-            <dd><img src="../media/flag-en.svg" alt="Flagge England"/>
-                <a href="/en/articles/calculator"> English</a>
-            </dd>
+            <dd><a id="italian" href="/it/articles/calculator" hreflang="it">Italiano</a></dd>
+            <dd><a id="french" href="/fr/articles/calculator" hreflang="fr">Francais</a></dd>
+            <dd><a id="english" href="/en/articles/calculator" hreflang="en">English</a></dd>
         </dl>
     </nav>
 </div>
@@ -61,9 +55,9 @@
 
     <h2>Taschenrechner</h2>
 
-    <article>
+    <article id="calculator">
         <header>
-            <h3>1 Taschenrechner</h3>
+            <h3>Taschenrechner</h3>
         </header>
 
         <p>
@@ -151,29 +145,28 @@
         </p>
     </article>
 
-    <article>
+    <article id="demonstration">
         <header>
-            <h3>2 Demonstration</h3>
+            <h3>Demonstration</h3>
         </header>
 
-        <figure id="demonstration">
-            <iframe src="./calculator/index.html" height="620" width="600"></iframe>
+        <figure>
+            <iframe src="./calculator/index.html"></iframe>
             <figcaption>Casino Mini von 1972</figcaption>
         </figure>
     </article>
 
-    <article>
+    <article id="ti-nspire">
         <header>
-            <h3>3 Bedienung des TI-Nspire CX CAS</h3>
+            <h3>Bedienung des TI-Nspire CX CAS</h3>
         </header>
 
-        <figure id="ti-nspire">
-            <video controls poster="../media/ti-nspire-cx-cas.png">
+        <figure>
+            <video poster="../media/ti-nspire-cx-cas.png" controls>
                 <source src="../media/TI-Nspire%20CX%20CAS%203D%20Model.mp4" type="video/mp4"/>
                 <source src="../media/TI-Nspire%20CX%20CAS%203D%20Model.webm" type="video/webm"/>
 
-                <track src="../media/ti-nspire-subtitles.en.vtt" kind="subtitles" srclang="en"
-                       label="Untertitel English" default/>
+                <track src="../media/ti-nspire-subtitles.en.vtt" kind="subtitles" srclang="en" label="English" default/>
             </video>
             <figcaption>TI-Nspire CX CAS Demonstration</figcaption>
         </figure>
@@ -191,9 +184,9 @@
         </footer>
     </article>
 
-    <article>
+    <article id="calculator-type">
         <header>
-            <h3>4 Taschenrechnervarianten</h3>
+            <h3>Taschenrechnervarianten</h3>
         </header>
 
         <div class="type-list">
@@ -239,10 +232,10 @@
                     Hewlett-Packard
                 </li>
             </ul>
-            <figcaption>
+            <div>
                 Taschenrechnervarianten, Source Wikipedia:
                 <a href="https://de.wikipedia.org/wiki/Taschenrechner">de.wikipedia.org/wiki/Taschenrechner</a>
-            </figcaption>
+            </div>
         </div>
 
         <footer>
@@ -251,64 +244,64 @@
         </footer>
     </article>
 
-    <article>
+    <article id="gained-time">
         <header>
-            <h3>5 Zeitgewinn</h3>
+            <h3>Zeitgewinn</h3>
         </header>
 
-        <div class="gained-time">
-            <table>
-                <caption>Zeitgewinn durch Benutzung eines Taschenrechners</caption>
-                <thead>
-                <tr>
-                    <th></th>
-                    <th>2-Stellen</th>
-                    <th>3-Stellen</th>
-                    <th>4-Stellen</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th>Addition / Subtraktion</th>
-                    <td>4</td>
-                    <td>8</td>
-                    <td>20</td>
-                </tr>
-                <tr>
-                    <th>Multiplikation</th>
-                    <td rowspan="2">15</td>
-                    <td rowspan="2">45</td>
-                    <td>240</td>
-                </tr>
-                <tr>
-                    <th>Division</th>
-                    <td>210</td>
-                </tr>
-                <tr>
-                    <th>Modulo</th>
-                    <td>5</td>
-                    <td>20</td>
-                    <td>65</td>
-                </tr>
-                <tr>
-                    <th>Quersumme</th>
-                    <td colspan="2">1</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <th>Wurzelziehen</th>
-                    <td colspan="3">Kaum machbar von Hand</td>
-                </tr>
-                <tr>
-                    <th>Potenzieren</th>
-                    <td>25</td>
-                    <td>75</td>
-                    <td>550</td>
-                </tr>
-                </tbody>
-            </table>
-            <iframe src="../media/zeitgewinn.svg" width="1060" height="750"></iframe>
-        </div>
+
+        <table>
+            <caption>Zeitgewinn durch Benutzung eines Taschenrechners</caption>
+            <thead>
+            <tr>
+                <th></th>
+                <th>2-Stellen</th>
+                <th>3-Stellen</th>
+                <th>4-Stellen</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>Addition / Subtraktion</th>
+                <td>4</td>
+                <td>8</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <th>Multiplikation</th>
+                <td rowspan="2">15</td>
+                <td rowspan="2">45</td>
+                <td>240</td>
+            </tr>
+            <tr>
+                <th>Division</th>
+                <td>210</td>
+            </tr>
+            <tr>
+                <th>Modulo</th>
+                <td>5</td>
+                <td>20</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <th>Quersumme</th>
+                <td colspan="2">1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <th>Wurzelziehen</th>
+                <td colspan="3">Kaum machbar von Hand</td>
+            </tr>
+            <tr>
+                <th>Potenzieren</th>
+                <td>25</td>
+                <td>75</td>
+                <td>550</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <iframe src="../media/zeitgewinn.svg" role="application"></iframe>
 
         <footer>
             Zuletzt geändert von Leandra Gross
@@ -316,14 +309,13 @@
         </footer>
     </article>
 
-    <article>
+    <article id="iphone">
         <header>
-            <h3>6 iPhone calculator tricks</h3>
+            <h3>iPhone calculator tricks</h3>
         </header>
 
-        <figure id="iphone">
-            <iframe src="https://www.youtube.com/embed/a7rcVgb41-0" width="640" height="400"
-                    allowfullscreen></iframe>
+        <figure>
+            <iframe src="https://www.youtube.com/embed/a7rcVgb41-0" role="application" allowfullscreen></iframe>
             <figcaption>iPhone Calculator Tricks on YouTube:
                 <a href="https://www.youtube.com/watch?v=a7rcVgb41-0">youtube.com/watch?v=a7rcVgb41-0</a>
             </figcaption>
@@ -335,13 +327,12 @@
         </footer>
     </article>
 
-    <article>
+    <article id="best-and-worst-calculators">
         <header>
-            <h3>7 Die besten und schlechtesten Taschenrechner</h3>
+            <h3>Die besten und schlechtesten Taschenrechner</h3>
         </header>
 
-        <p>In einer 2014 durchgeführten Benutzerbefragung schnitten die Modelle von Casino am Besten ab:
-        </p>
+        <p>In einer 2014 durchgeführten Benutzerbefragung schnitten die Modelle von Casino am Besten ab:</p>
         <ol>
             <li>Casino UX5</li>
             <li>Casino TZZ</li>
@@ -361,12 +352,12 @@
         </footer>
     </article>
 
-    <article>
+    <article id="search">
         <header>
-            <h3>8 Taschenrechner suchen nach Modell</h3>
+            <h3>Taschenrechner suchen nach Modell</h3>
         </header>
 
-        <form id="search">
+        <form>
             <datalist id="search-suggestions">
                 <option value="Mexico Instrument TI 30">Mexico Instrument TI 30</option>
                 <option value="Mexico Instrument TI 32">Mexico Instrument TI 32</option>
@@ -395,10 +386,10 @@
     <form name="new-autor">
         <fieldset>
             <legend>Autor</legend>
-            <label id="gender">
-                <span>Herr <input type="radio" name="gender" value="male" checked/></span>
-                <span>Frau <input type="radio" name="gender" value="female"/></span>
-            </label>
+            <div class="gender">
+                <span><label>Herr <input type="radio" name="gender" value="male" checked/></label></span>
+                <span><label>Frau <input type="radio" name="gender" value="female"/></label></span>
+            </div>
             <label>Name<input type="text" name="name" required/></label>
             <label>E-Mail<input type="email" name="mail" required/></label>
             <label>Webseite<input type="url" name="website"/></label>
@@ -418,15 +409,15 @@
         </fieldset>
         <fieldset>
             <legend>Rechtliches</legend>
-            <label id="verification">
-						<span><input type="checkbox" value="textowner"/>
-						Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin.</span>
-						<span><input type="checkbox" name="verification" value="mediaowner"/>
-						Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin.</span>
-						<span><input type="checkbox" name="verification" value="texttruth"/>
+            <div class="verification">
+						<span><label><input type="checkbox" value="textowner"/>
+						Ich bestätige, das ich keine Texte veröffentlichen werde, deren Urheber ich nicht bin.</label></span>
+						<span><label><input type="checkbox" name="verification" value="mediaowner"/>
+						Ich bestätige, das ich keine Medien veröffentlichen werden, deren Urheber ich nicht bin.</label></span>
+						<span><label><input type="checkbox" name="verification" value="texttruth"/>
 						Ich bestätige, das nur Texte veröffentlichen werde, die nach bestem Treu und glauben der Wahrheit
-						entsprechen und eingereichte Medien Bilder nicht manipuliert wurden.</span>
-            </label>
+						entsprechen und eingereichte Medien Bilder nicht manipuliert wurden.</label></span>
+            </div>
         </fieldset>
 
         <button type="submit">Account anlegen</button>
@@ -435,22 +426,18 @@
 </aside>
 
 <footer id="page-footer">
-    <p>
-        <adress>Bahnhofstrasse 42, 8000 Zürich</adress>
-    </p>
+    <address>Bahnhofstrasse 42, 8000 Zürich</address>
     <p>
         <a href="tel:+41554443322">055 444 33 22</a>
         <a href="mailto:info@wikipraktika.com">info@wikipraktika.com</a>
     </p>
-    <p>
-        <small>
-            Alle Inhalte von <i>Wikipraktika</i> stehen unter der
-            <a href="http://creativecommons.org/licenses/by-sa/4.0/">
-                <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Logo Creativecommons"/>
-                Creative Commons Attribution-ShareAlike 4.0 International License</a>
-            und dürfen nur mit Nennung des Autors weiterverwendet werden.
-        </small>
-    </p>
+    <small>
+        Alle Inhalte von <i>Wikipraktika</i> stehen unter der
+        <a href="http://creativecommons.org/licenses/by-sa/4.0/">
+            <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="Logo Creativecommons"/>
+            Creative Commons Attribution-ShareAlike 4.0 International License</a>
+        und dürfen nur mit Nennung des Autors weiterverwendet werden.
+    </small>
 </footer>
 </body>
 </html>
