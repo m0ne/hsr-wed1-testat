@@ -292,8 +292,7 @@ button {
     padding: 0 1em;
 }
 
-#search > form > input {
-    width: 20rem;
+input:not([type="radio"]):not([type="checkbox"]), select {
     height: 1.8rem;
 }
 
