@@ -1,87 +1,74 @@
 /**
  * core
  */
-var currentInputValue = undefined;
-var currentOperator = undefined;
-var operator1 = undefined;
-var operator2 = undefined;
+var calculatorState = {
+    operand1: undefined,
+    operand2: undefined,
+    operator: undefined
+}
 
-function calculate() {
-    console.log("calculate: " + operator1 + " " + currentOperator + " " + operator2);
-    if(operator1 === undefined || operator2 === undefined)
+function doCalculation() {
+    console.log("calculate: " + calculatorState.operand1 + " " + calculatorState.operator + " " + calculatorState.operand2);
+    if (calculatorState.operand1 === undefined || calculatorState.operand2 === undefined)
         return undefined;
-    switch(currentOperator) {
+    switch (calculatorState.operator) {
         case '+':
-            return operator1 + operator2;
+            return calculatorState.operand1 + calculatorState.operand2;
             break;
         case '-':
-            return operator1 - operator2;
+            return calculatorState.operand1 - calculatorState.operand2;
             break;
         case '/':
-            return operator1 / operator2;
+            return (calculatorState.operand2 === 0) ? undefined : (calculatorState.operand1 / calculatorState.operand2);
             break;
         case '*':
-            return operator1 * operator2;
+            return calculatorState.operand1 * calculatorState.operand2;
             break;
         default:
             return undefined;
     }
 }
 
-function setOperator(operator) {
-    currentOperator = operator;
-    if(operator1 === undefined) {
-        operator1 = currentInputValue;
-        currentInputValue = undefined;
-        writeInput("");
-    }
-    writeOutput(((operator1 === undefined) ? "" : (operator1 + " ")) + currentOperator);
+function defineOperator(operator) {
+    calculatorState.operator = operator;
+    return calculatorState;
 }
 
-function equals() {
-    operator2 = currentInputValue;
-    currentInputValue = calculate();
-    console.log("result = " + currentInputValue);
-    resetOperators();
-    if(currentInputValue === undefined) {
-        error("Invalid calculation");
-    } else {
-        writeInput(currentInputValue);
-        writeOutput("");
+function calculate() {
+    if (calculatorState.operand2 != undefined) {
+        calculatorState.operand1 = doCalculation();
+        calculatorState.operand2 = undefined;
     }
+    console.log("calculation result = " + calculatorState.operand1);
+    return calculatorState;
 }
 
 function updateCurrentInputValue(digit) {
-    if(currentInputValue === undefined)
-        currentInputValue = 0;
-    currentInputValue = (currentInputValue * 10) + parseInt(digit);
-    console.log('Current input value: ' + currentInputValue);
-    writeInput(currentInputValue);
+    if (calculatorState.operator === undefined) {
+        calculatorState.operand1 = calculateNewNumberWithDigit(calculatorState.operand1, digit);
+    } else {
+        calculatorState.operand2 = calculateNewNumberWithDigit(calculatorState.operand2, digit);
+    }
+    return calculatorState;
 }
 
-function resetOperators() {
-    operator1 = undefined;
-    operator2 = undefined;
+function calculateNewNumberWithDigit(number, digit) {
+    var currentValue = (number === undefined) ? 0 : number;
+    return (currentValue * 10) + parseInt(digit);
 }
 
 function clear() {
     console.log("clear");
-    currentInputValue = undefined;
-    resetOperators();
-    writeInput("");
-    writeOutput("");
-}
-
-function error(message) {
-    console.log("Error: " + message);
-    writeOutput(message);
+    calculatorState.operand1 = undefined;
+    calculatorState.operand2 = undefined;
+    calculatorState.operator = undefined;
 }
 
 /**
  * UI
  */
-$(function(){
-    writeOutput('Welcome');
+$(function () {
+    writeOutput("Welcome");
     initializeClickHandlers();
 });
 
@@ -100,19 +87,37 @@ function welcomeClickHandler() {
 }
 
 function numberClickHandler() {
-    updateCurrentInputValue(this.value);
+    var state = updateCurrentInputValue(this.value);
+    if (state.operator === undefined) {
+        writeInput(state.operand1);
+    } else {
+        writeInput(state.operand2);
+    }
 }
 
 function operatorClickHandler() {
-    setOperator(this.value);
+    var state = defineOperator(this.value);
+    if (state.operand2 === undefined) {
+        writeInput("");
+    }
+    writeOutput(((state.operand1 === undefined) ? "" : (state.operand1 + " ")) + state.operator);
 }
 
 function equalsClickHandler() {
-    equals();
+    var state = calculate();
+    if (state.operand1 === undefined) {
+        writeOutput("Invalid calculation");
+        clear();
+    } else {
+        writeInput(state.operand1);
+        writeOutput("");
+    }
 }
 
 function clearClickHandler() {
     clear();
+    writeInput("");
+    writeOutput("");
 }
 
 function writeOutput(output) {
