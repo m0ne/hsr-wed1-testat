@@ -8,9 +8,9 @@ var calculatorState = {
 }
 
 function doCalculation() {
-    console.log("calculate: " + calculatorState.operand1 + " " + calculatorState.operator + " " + calculatorState.operand2);
-    if (calculatorState.operand1 === undefined || calculatorState.operand2 === undefined)
+    if (calculatorState.operand1 === undefined || calculatorState.operand2 === undefined) {
         return undefined;
+    }
     switch (calculatorState.operator) {
         case '+':
             return calculatorState.operand1 + calculatorState.operand2;
@@ -39,7 +39,6 @@ function calculate() {
         calculatorState.operand1 = doCalculation();
         calculatorState.operand2 = undefined;
     }
-    console.log("calculation result = " + calculatorState.operand1);
     return calculatorState;
 }
 
@@ -58,7 +57,6 @@ function calculateNewNumberWithDigit(number, digit) {
 }
 
 function clear() {
-    console.log("clear");
     calculatorState.operand1 = undefined;
     calculatorState.operand2 = undefined;
     calculatorState.operator = undefined;
@@ -81,7 +79,6 @@ function initializeClickHandlers() {
 }
 
 function welcomeClickHandler() {
-    console.log("Remove welcome message");
     writeOutput("");
     $("button").unbind("click", welcomeClickHandler)
 }
