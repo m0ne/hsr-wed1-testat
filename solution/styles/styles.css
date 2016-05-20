@@ -183,24 +183,25 @@ dl > dd {
     margin-left: 1.5rem;
 }
 
-ul > li {
-    margin-left: 2rem;
-    list-style-type: square;
-}
-
 ol > li {
     margin-left: 4rem;
     margin-bottom: 1rem;
 }
 
-.type-list > p {
+article > dl > dt {
     color: steelblue;
     font-weight: bold;
     margin-bottom: 0;
     margin-top: 0.5rem;
 }
 
-.type-list > div {
+article > dl > dd {
+    margin-left: 2rem;
+    display: list-item;
+    list-style-type: square;
+}
+
+article > dl + div {
     margin-top: 1rem;
 }
 
