@@ -50,30 +50,30 @@ body {
     color: white;
 }
 
-.navigation {
+nav > dl {
     width: 100%;
     background: rgb(230, 230, 230);
     border: solid steelblue;
     padding: 0.5rem;
 }
 
-.navigation a {
+nav a {
     color: steelblue;
 }
 
-.navigation a[hreflang="it"]::before {
+nav a[hreflang="it"]::before {
     background: url("../../media/flag-it.svg") no-repeat;
 }
 
-.navigation a[hreflang="fr"]::before {
+nav a[hreflang="fr"]::before {
     background: url("../../media/flag-fr.svg") no-repeat;
 }
 
-.navigation a[hreflang="en"]::before {
+nav a[hreflang="en"]::before {
     background: url("../../media/flag-en.svg") no-repeat;
 }
 
-.navigation a[hreflang]::before {
+nav a[hreflang]::before {
     background-size: 1.4rem 0.8rem;
     display: inline-block;
     width: 1.7em;
