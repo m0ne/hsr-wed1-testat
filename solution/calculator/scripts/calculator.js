@@ -5,7 +5,7 @@ var calculatorState = {
     operand1: undefined,
     operand2: undefined,
     operator: undefined
-}
+};
 
 function doCalculation() {
     if (calculatorState.operand1 === undefined || calculatorState.operand2 === undefined) {
